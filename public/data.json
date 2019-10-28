@@ -1,0 +1,32 @@
+[
+    {
+        "date": "2016-04-25",
+        "eventName": "Test Whatsapp",
+        "locale": "US"
+    },
+    {
+        "date": "2017-04-25",
+        "eventName": "テストノキア",
+        "locale": "JP"
+    },
+    {
+        "date": "2018-04-25",
+        "eventName": "Super Jewels Quest",
+        "locale": "CA, FR"
+    },
+    {
+        "date": "2019-04-25",
+        "eventName": "Mole Slayer",
+        "locale": "FR"
+    },
+    {
+        "date": "2020-04-25",
+        "eventName": "Mancala Mix",
+        "locale": "CA, FR, JP"
+    },
+    {
+        "date": "2021-04-25",
+        "eventName": "Test Twitter",
+        "locale": "US"
+    }
+]

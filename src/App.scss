@@ -1,0 +1,93 @@
+.App {
+  margin: auto 10%;
+  button {
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    background: #fff;
+    color: #000;
+    box-shadow: 0px 0px 2px #282c34;
+    border: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+  .tab-btn-wrapper {
+    text-align: center;
+    button {
+      width: 300px;
+      &.active {
+        background: #2196f3;
+        color: #fff;
+      }
+    }
+  }
+  .loader {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  ul {
+    margin: 10px;
+    padding-inline-start: 0px;
+    li {
+      line-height: 20px;
+      padding: 5px;
+      margin: 5px;
+      background: #2b6778;
+      border-radius: 5px;
+      color: #fff;
+      text-transform: uppercase;
+      align-items: center;
+      .row {
+        flex-direction: row;
+        display: flex;
+        .column {
+          width: 200px;
+          height: 150px;
+          background: #fff;
+          margin-right: 5px;
+          color: #000;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border-collapse: collapse;
+  th {
+    background: #ccc;
+  }
+  td,
+  th {
+    border: 1px solid #adacac;
+    padding: 8px;
+  }
+}
+
+.col {
+  display: inline-block;
+  vertical-align: middle;
+}
+img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+.center {
+  text-align: center;
+}
+.cursor {
+  cursor: pointer;
+}
