@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import './App.scss';
 import React, { Component } from 'react';
 import { fetchSections, updateSctions } from './reducer';
+import * as message from './message';
 
 const labels = {
   'past': 'days ago',
@@ -15,6 +16,7 @@ export class App extends Component {
       showLoader: false,
       currentView: 'future',
       showDateSelector: {},
+      currentLang: 'EN',
     };
   }
 
@@ -48,12 +50,25 @@ export class App extends Component {
     this.setState({ showDateSelector: '' });
   }
 
+  changeLang() {
+    const currentLang = this.state.currentLang;
+    this.setState({ currentLang: currentLang == 'EN' ? 'JP' : 'EN' });
+  }
+
   render() {
     const { sections } = this.props;
-    const { showLoader, currentView, showDateSelector } = this.state;
+    const { showLoader, currentView, showDateSelector, currentLang } = this.state;
     return (
       <div className="App" onClick={this.hideDate.bind(this)}>
-        <h1>Manage Campaigns</h1>
+        <div className="row">
+          <div className="event-logo col">
+            <h1>Manage Campaigns</h1>
+          </div>
+          <div className="col right">
+            <button className='active' onClick={this.changeLang.bind(this)}>CHANGE TO  {currentLang == 'EN' ? 'JAPANESE' : 'ENGLISH'}</button>
+          </div>
+        </div>
+
         <hr />
         {showLoader && <div className="loader">
           <img src="./loader.gif" alt="Loading..." width="400" height="400" />
@@ -88,7 +103,7 @@ export class App extends Component {
                         <img src="./logo192.png" alt="loading..." />
                       </div>
                       <div className="col">
-                        <div>{section.eventName}</div>
+                        <div>{message[currentLang][section.eventName]}</div>
                         <div>{section.locale}</div>
                       </div>
                     </div>
