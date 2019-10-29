@@ -123,8 +123,6 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = {
   dispatchUpdate: updateSctions,
   dispatchFetch: fetchSections,
-
-
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
