@@ -1,5 +1,6 @@
 .App {
   margin: auto 10%;
+  height: 95vh;
   button {
     width: 100px;
     height: 30px;
@@ -15,9 +16,21 @@
     text-align: center;
     button {
       width: 300px;
+      position: relative;
+      cursor: pointer;
       &.active {
         background: #2196f3;
         color: #fff;
+        &:after {
+          content: "";
+          position: absolute;
+          border: 5px solid #2196f3;
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+          border-right-color: transparent;
+          right: 50%;
+          bottom: -35%;
+        }
       }
     }
   }
@@ -90,4 +103,27 @@ img {
 }
 .cursor {
   cursor: pointer;
+}
+
+.action {
+  position: relative;
+  .dateSelector {
+    position: absolute;
+    border: 1px solid #ccc;
+    z-index: 10;
+    left: 14%;
+    padding: 10px;
+    background: #ccc;
+    border-radius: 4px;
+    &:after {
+      content: "";
+      position: absolute;
+      border: 5px solid #ccc;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      right: 50%;
+      top: -20%;
+    }
+  }
 }
