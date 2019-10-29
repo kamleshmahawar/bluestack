@@ -15,12 +15,7 @@
   .tab-btn-wrapper {
     text-align: center;
     button {
-      width: 300px;
-      position: relative;
-      cursor: pointer;
       &.active {
-        background: #2196f3;
-        color: #fff;
         &:after {
           content: "";
           position: absolute;
@@ -42,6 +37,20 @@
     img {
       border-radius: 50%;
     }
+  }
+
+  button {
+    width: 300px;
+    position: relative;
+    cursor: pointer;
+    &.active {
+      background: #2196f3;
+      color: #fff;
+    }
+  }
+  .right {
+    float: right;
+    margin-top: 24px;
   }
 
   ul {
